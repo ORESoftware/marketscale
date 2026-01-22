@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MarketScale - Premier Marketing Agency" />
+    <title>MarketScale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap"
+      rel="stylesheet" />
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1e40af;
+        --secondary: #0f172a;
+        --text-light: #f8fafc;
+        --text-gray: #94a3b8;
+        --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Outfit', sans-serif;
+        background: var(--bg-gradient);
+        color: var(--text-light);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+      }
+
+      /* Header */
+      header {
+        padding: 2rem 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        border-bottom: var(--glass-border);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        background: linear-gradient(to right, #60a5fa, #a855f7);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        letter-spacing: -0.05em;
+      }
+
+      .cta-button {
+        padding: 0.8rem 1.5rem;
+        background: var(--primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+      }
+
+      .cta-button:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.23);
+      }
+
+      /* Main Content */
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        max-width: 800px;
+      }
+
+      h1 span {
+        color: #60a5fa;
+      }
+
+      .hero-text {
+        color: var(--text-gray);
+        font-size: 1.25rem;
+        max-width: 600px;
+        margin-bottom: 4rem;
+      }
+
+      /* Team Section */
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        max-width: 900px;
+        width: 100%;
+      }
+
+      .member-card {
+        background: var(--card-bg);
+        border: var(--glass-border);
+        border-radius: 20px;
+        padding: 2rem;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .member-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .member-img-container {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .member-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .member-name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .member-role {
+        color: #60a5fa;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+      }
+
+      .member-link {
+        text-decoration: none;
+        color: var(--text-gray);
+        font-size: 0.9rem;
+        transition: color 0.2s;
+        margin-top: auto;
+        border: 1px solid var(--glass-border);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+      }
+
+      .member-link:hover {
+        color: white;
+        border-color: #60a5fa;
+        background: rgba(96, 165, 250, 0.1);
+      }
+
+      /* Footer */
+      footer {
+        padding: 3rem 5%;
+        border-top: var(--glass-border);
+        margin-top: auto;
+        text-align: center;
+        color: var(--text-gray);
+      }
+
+      .contact-email {
+        color: #60a5fa;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">MarketScale</div>
+      <a href="mailto:alexander.d.mills@gmail.com" class="cta-button">Contact Us</a>
+    </header>
+
+    <main>
+      <h1>Scaling Brands for the <br /><span>Digital Future</span></h1>
+      <p class="hero-text">
+        We build data-driven strategies that accelerate growth and define market leaders.
+      </p>
+
+      <div class="team-grid">
+        <!-- Alex Mills -->
+        <div class="member-card">
+          <div class="member-img-container">
+            <img
+              src="https://ui-avatars.com/api/?name=Alex+Mills&background=2563eb&color=fff&size=200"
+              alt="Alex Mills"
+              class="member-img" />
+          </div>
+          <h3 class="member-name">Alex Mills</h3>
+          <div class="member-role">Founder</div>
+          <a
+            href="https://www.linkedin.com/in/alexanderdmills/"
+            target="_blank"
+            class="member-link"
+            >View LinkedIn Profile</a
+          >
+        </div>
+
+        <!-- Vinayak Pandey -->
+        <div class="member-card">
+          <div class="member-img-container">
+            <img
+              src="https://ui-avatars.com/api/?name=Vinayak+Pandey&background=a855f7&color=fff&size=200"
+              alt="Vinayak Pandey"
+              class="member-img" />
+          </div>
+          <h3 class="member-name">Vinayak Pandey</h3>
+          <div class="member-role">Lead Strategist</div>
+          <a
+            href="https://www.linkedin.com/in/vinayak-pandey-88a7541b2/"
+            target="_blank"
+            class="member-link"
+            >View LinkedIn Profile</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 MarketScale. All rights reserved.</p>
+      <br />
+      <a href="mailto:alexander.d.mills@gmail.com" class="contact-email"
+        >alexander.d.mills@gmail.com</a
+      >
+    </footer>
+  </body>
+</html>
